@@ -7066,6 +7066,7 @@ ganache-core@^2.13.2:
     websocket "1.0.32"
   optionalDependencies:
     ethereumjs-wallet "0.6.5"
+    web3 "1.8.1"
 
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
@@ -13335,7 +13336,7 @@ web3-bzz@1.2.11:
     "@types/node" "^12.12.6"
     got "9.6.0"
     swarm-js "^0.1.40"
-    underscore "1.9.1"
+    underscore "1.13.6"
 
 web3-bzz@1.8.1:
   version "1.8.1"
@@ -13351,7 +13352,7 @@ web3-core-helpers@1.2.11:
   resolved "https://registry.yarnpkg.com/web3-core-helpers/-/web3-core-helpers-1.2.11.tgz#84c681ed0b942c0203f3b324a245a127e8c67a99"
   integrity sha512-PEPoAoZd5ME7UfbnCZBdzIerpe74GEvlwT4AjOmHeCVZoIFk7EqvOZDejJHt+feJA6kMVTdd0xzRNN295UhC1A==
   dependencies:
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-eth-iban "1.2.11"
     web3-utils "1.2.11"
 
@@ -13369,7 +13370,7 @@ web3-core-method@1.2.11:
   integrity sha512-ff0q76Cde94HAxLDZ6DbdmKniYCQVtvuaYh+rtOUMB6kssa5FX0q3vPmixi7NPooFnbKmmZCM6NvXg4IreTPIw==
   dependencies:
     "@ethersproject/transactions" "^5.0.0-beta.135"
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-core-helpers "1.2.11"
     web3-core-promievent "1.2.11"
     web3-core-subscriptions "1.2.11"
@@ -13405,7 +13406,7 @@ web3-core-requestmanager@1.2.11:
   resolved "https://registry.yarnpkg.com/web3-core-requestmanager/-/web3-core-requestmanager-1.2.11.tgz#fe6eb603fbaee18530293a91f8cf26d8ae28c45a"
   integrity sha512-oFhBtLfOiIbmfl6T6gYjjj9igOvtyxJ+fjS+byRxiwFJyJ5BQOz4/9/17gWR1Cq74paTlI7vDGxYfuvfE/mKvA==
   dependencies:
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-core-helpers "1.2.11"
     web3-providers-http "1.2.11"
     web3-providers-ipc "1.2.11"
@@ -13428,7 +13429,7 @@ web3-core-subscriptions@1.2.11:
   integrity sha512-qEF/OVqkCvQ7MPs1JylIZCZkin0aKK9lDxpAtQ1F8niEDGFqn7DT8E/vzbIa0GsOjL2fZjDhWJsaW+BSoAW1gg==
   dependencies:
     eventemitter3 "4.0.4"
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-core-helpers "1.2.11"
 
 web3-core-subscriptions@1.8.1:
@@ -13471,7 +13472,7 @@ web3-eth-abi@1.2.11:
   integrity sha512-PkRYc0+MjuLSgg03QVWqWlQivJqRwKItKtEpRUaxUAeLE7i/uU39gmzm2keHGcQXo3POXAbOnMqkDvOep89Crg==
   dependencies:
     "@ethersproject/abi" "5.0.0-beta.153"
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-utils "1.2.11"
 
 web3-eth-abi@1.8.1:
@@ -13492,7 +13493,7 @@ web3-eth-accounts@1.2.11:
     ethereumjs-common "^1.3.2"
     ethereumjs-tx "^2.1.1"
     scrypt-js "^3.0.1"
-    underscore "1.9.1"
+    underscore "1.13.6"
     uuid "3.3.2"
     web3-core "1.2.11"
     web3-core-helpers "1.2.11"
@@ -13522,7 +13523,7 @@ web3-eth-contract@1.2.11:
   integrity sha512-MzYuI/Rq2o6gn7vCGcnQgco63isPNK5lMAan2E51AJLknjSLnOxwNY3gM8BcKoy4Z+v5Dv00a03Xuk78JowFow==
   dependencies:
     "@types/bn.js" "^4.11.5"
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-core "1.2.11"
     web3-core-helpers "1.2.11"
     web3-core-method "1.2.11"
@@ -13552,7 +13553,7 @@ web3-eth-ens@1.2.11:
   dependencies:
     content-hash "^2.5.2"
     eth-ens-namehash "2.0.8"
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-core "1.2.11"
     web3-core-helpers "1.2.11"
     web3-core-promievent "1.2.11"
@@ -13619,7 +13620,7 @@ web3-eth@1.2.11:
   resolved "https://registry.yarnpkg.com/web3-eth/-/web3-eth-1.2.11.tgz#4c81fcb6285b8caf544058fba3ae802968fdc793"
   integrity sha512-REvxW1wJ58AgHPcXPJOL49d1K/dPmuw4LjPLBPStOVkQjzDTVmJEIsiLwn2YeuNDd4pfakBwT8L3bz1G1/wVsQ==
   dependencies:
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-core "1.2.11"
     web3-core-helpers "1.2.11"
     web3-core-method "1.2.11"
@@ -13719,7 +13720,7 @@ web3-providers-ipc@1.2.11:
   integrity sha512-yhc7Y/k8hBV/KlELxynWjJDzmgDEDjIjBzXK+e0rHBsYEhdCNdIH5Psa456c+l0qTEU2YzycF8VAjYpWfPnBpQ==
   dependencies:
     oboe "2.1.4"
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-core-helpers "1.2.11"
 
 web3-providers-ipc@1.8.1:
@@ -13736,7 +13737,7 @@ web3-providers-ws@1.2.11:
   integrity sha512-ZxnjIY1Er8Ty+cE4migzr43zA/+72AF1myzsLaU5eVgdsfV7Jqx7Dix1hbevNZDKFlSoEyq/3j/jYalh3So1Zg==
   dependencies:
     eventemitter3 "4.0.4"
-    underscore "1.9.1"
+    underscore "1.13.6"
     web3-core-helpers "1.2.11"
     websocket "^1.0.31"
 
@@ -13780,7 +13781,7 @@ web3-utils@1.2.11:
     ethjs-unit "0.1.6"
     number-to-bn "1.7.0"
     randombytes "^2.1.0"
-    underscore "1.9.1"
+    underscore "1.13.6"
     utf8 "3.0.0"
 
 web3-utils@1.8.1, web3-utils@^1.0.0-beta.31, web3-utils@^1.3.6:
