@@ -39,11 +39,23 @@ export const Web3Provider = (props: NFTContractProviderProps) => {
   const connect = useCallback(async () => {
     if (provider) {
       // Request accounts, get signer and get signer's address
-      // More information can be found: https://docs.ethers.io/v5/getting-started/#getting-started--connecting
+      // 1. Metamask requesting permission to connect user accounts
+      await provider.send('eth_requestAccounts', []);
 
-      const address = '';
+      // 2. Get a signer for signing the txns
+      const signer = provider.getSigner();
 
-      setAddress(address);
+      // 3. Get the current address
+      const currentAddress = await signer.getAddress();
+
+      // 4. Get Chain ID
+      const chainID = await signer.getChainId();
+
+      if (chainID != (80001 as number)) {
+        alert('Please connect to the Polygon Mumbai testnet in MetaMask!');
+      }
+
+      setAddress(currentAddress);
     } else {
       alert('Please install MetaMask at https://metamask.io');
     }
