@@ -63,6 +63,12 @@ const CreatePostForm = (): ReactElement => {
           // Submit Arweave transaction
           // Use axios to post data and address to api/arweave/post endpoint.
           // This request should return transactionId
+          const response = await axios.post(routes.api.arweave.post, {
+            data,
+            address,
+          });
+          const transactionId = response.data;
+          console.log('transactionId: ', transactionId);
 
           // Mint NFT
           // Get signer and connect it to smart contract
