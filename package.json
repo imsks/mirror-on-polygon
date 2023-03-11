@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:arweave": "ARWEAVE_WALLET=$(cat arweave-wallet.json) yarn dev",
     "build": "next build",
     "start": "next start",
     "test": "jest",
