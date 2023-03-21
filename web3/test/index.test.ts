@@ -18,7 +18,7 @@ describe('MirrorClone', function () {
     describe('createToken', () => {
       it('reverts when empty tokenURI passed', async () => {
         await expect(contract.createToken('')).to.be.revertedWith(
-          'Empty tokenURI',
+          'Empty Token URI',
         );
       });
 

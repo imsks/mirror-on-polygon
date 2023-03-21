@@ -32,6 +32,7 @@ const PostsList = (props: PostListProps): ReactElement => {
   const {address = ''} = props;
 
   const {data, loading, error, refetch} = useGetTransactionIndex(address);
+  // console.log('HERE', data, address);
 
   if (error) {
     return (

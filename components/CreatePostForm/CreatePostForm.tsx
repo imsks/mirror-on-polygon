@@ -11,16 +11,16 @@ const createJsonMetaData = (data: any) => {
   return JSON.stringify(data);
 };
 
-export type CreatePostFormValues = {
+export type CreateEntryFormValues = {
   title: string;
   body: string;
 };
 
-const CreatePostForm = (): ReactElement => {
+const CreateEntryForm = (): ReactElement => {
   const router = useRouter();
   const {mutate} = useSWRConfig();
   const {address, contract, provider} = useWeb3();
-  const [values, setValues] = useState<CreatePostFormValues>({
+  const [values, setValues] = useState<CreateEntryFormValues>({
     title: '',
     body: '',
   });
@@ -58,27 +58,30 @@ const CreatePostForm = (): ReactElement => {
         }
 
         if (provider && contract) {
-          const data = createJsonMetaData(values);
-
+          // For Step 3: Create Post
           // Submit Arweave transaction
           // Use axios to post data and address to api/arweave/post endpoint.
           // This request should return transactionId
+          const data = createJsonMetaData(values);
           const response = await axios.post(routes.api.arweave.post, {
             data,
             address,
           });
           const transactionId = response.data;
           console.log('transactionId: ', transactionId);
+          // Stop here when you complete Step 3 ^^^^
 
-          // Mint NFT
+          // For Step 6: Mint NFT
           // Get signer and connect it to smart contract
           // More information can be found here: https://docs.ethers.io/v5/getting-started/#getting-started--writing
+          const signer = provider.getSigner();
+          const contractWithSigner = contract.connect(signer);
 
           // Call `createToken` method passing in transactionId
-          const resp = undefined;
+          const resp = await contractWithSigner.createToken(transactionId);
 
           // Wait for confirmation
-          const rec = undefined;
+          const rec = await resp.wait();
 
           if (rec) {
             mutate(routes.api.arweave.search());
@@ -138,4 +141,4 @@ const CreatePostForm = (): ReactElement => {
   );
 };
 
-export default CreatePostForm;
+export default CreateEntryForm;

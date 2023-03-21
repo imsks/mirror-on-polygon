@@ -5,6 +5,7 @@ import {DataT} from '@/types';
 import {initialize} from 'lib/arweave';
 
 const arweave = initialize();
+// console.log(arweave);
 
 const getData = async (txId: string) => {
   const buffer = (await arweave.transactions.getData(txId, {
@@ -40,6 +41,7 @@ export default async function (
 
     // More information can be found here: https://www.npmjs.com/package/ardb
     const txs = await ardb.search('transactions').tags(tags).limit(10).find();
+    // console.log('txs', txs);
 
     const promises = txs.map((tx: any) => getData(tx._id));
     const data = await Promise.all(promises);
